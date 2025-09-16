@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# User Dashboard (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small User Dashboard app built with **Create React App**, plain CSS, and **React Context** for global state.  
+It fetches users from `jsonplaceholder.typicode.com`, allows searching by name, adding new users (client-side), and viewing full user details with React Router.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
+- Fetch & display user list (name, email, phone, company)
+- Search/filter users by name
+- Create New User form (client-side only, stored in Context)
+- User Details page (shows address + geo location)
+- Responsive design using plain CSS (Flexbox/Grid)
+- Global state management with React Context
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
+- React (Create React App, hooks: useEffect, useState, useContext)
+- React Router DOM (routing)
+- React Context (state management)
+- Fetch API (data fetching)
+- Plain CSS (responsive with Flexbox/Grid)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📂 Folder Structure
+frontend/
+├─ public/
+│ └─ index.html
+├─ src/
+│ ├─ components/
+│ │ ├─ Dashboard.js
+│ │ ├─ Dashboard.css
+│ │ ├─ UserDetails.js
+│ │ └─ UserDetails.css
+│ ├─ context/
+│ │ └─ UserContext.js
+│ ├─ App.js
+│ ├─ index.js
+│ ├─ index.css
+│ └─ App.css
+├─ package.json
+└─ README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies
+npm install
 
-### `npm run build`
+3. Run the app
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Runs at http://localhost:3000/
+.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Build for production
+npm run build
 
-### `npm run eject`
+🧩 Development Steps (What I did)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Project Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Bootstrapped with Create React App.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Cleaned starter files.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Routing
 
-## Learn More
+Added react-router-dom.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Routes:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+/ → Dashboard
 
-### Code Splitting
+/user/:id → User Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Global State (React Context)
 
-### Analyzing the Bundle Size
+UserContext.js:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Fetch users from API.
 
-### Making a Progressive Web App
+Store users in state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Expose users + addUser() globally.
 
-### Advanced Configuration
+Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Displays user cards (name, email, phone, company).
 
-### Deployment
+Search bar filters by name.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+New User Form → Adds to Context.
 
-### `npm run build` fails to minify
+User Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Uses useParams() to get id.
+
+Displays full details (address, geo).
+
+Handles invalid user ID gracefully.
+
+Styling
+
+Plain CSS (Flexbox + responsive breakpoints).
+
+Cards grid on desktop, stacked on mobile.
+
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fa2198a6-2b30-4cf6-8413-1b7c147adf58" />
+
