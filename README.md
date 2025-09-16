@@ -109,3 +109,9 @@ Cards grid on desktop, stacked on mobile.
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fa2198a6-2b30-4cf6-8413-1b7c147adf58" />
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/410bab5b-08eb-496c-b7f5-a06215d117ce" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b03a1b51-329e-4bc1-b4ba-8fe2062e7614" />
+
+
+
